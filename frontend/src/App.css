@@ -1,69 +1,75 @@
-/* Reset margin/padding and full height */
-html, body {
+/* Reset and base styles */
+body, html {
   margin: 0;
   padding: 0;
   height: 100%;
-  background-color: #e6f0fa; /* soft blue */
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .container {
+  height: 100vh;
+  width: 100vw;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  background: url('/afe86c3b-4bce-47e8-b8c1-7feb8320a932.png') center center / cover no-repeat;
+  position: relative;
+  overflow: hidden;
 }
 
-/* Quote box styling */
+/* Soft transparent overlay: light blur, more image visibility */
+.container::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.15); /* more transparent */
+  backdrop-filter: blur(4px);            /* softer blur */
+  -webkit-backdrop-filter: blur(4px);
+  z-index: 0;
+}
+
+/* Quote card */
 .quote-box {
   position: relative;
-  background-color: #fefefe;
+  z-index: 1;
+  background: rgba(255, 255, 255, 0.6);  /* semi-transparent white */
+  border-radius: 20px;
   padding: 2.5rem 3rem;
-  border-left: 6px solid #42a5f5;
-  border-radius: 16px;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
   text-align: center;
-  max-width: 600px;
+  max-width: 700px;
   width: 90%;
+  backdrop-filter: blur(10px);
 }
 
-/* Decorative quote icon above */
-.quote-box::before {
-  content: url('https://cdn-icons-png.flaticon.com/512/25/25426.png');
-  position: absolute;
-  top: -35px;
-  left: calc(50% - 20px);
-  width: 40px;
-  height: 40px;
-  opacity: 0.7;
-}
-
+/* Quote text */
 .quote {
-  font-size: 1.6rem;
+  font-size: 1.8rem;
   font-style: italic;
-  color: #37474f;
-  margin: 2rem 0 1.2rem;
+  color: #222;
+  margin-bottom: 1.2rem;
 }
 
+/* Author */
 .author {
-  font-size: 1rem;
-  font-weight: 500;
-  color: #1976d2;
-  margin-bottom: 2rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #007acc;
+  margin-bottom: 1.8rem;
 }
 
 /* Button styling */
 button {
   padding: 0.6rem 2rem;
   font-size: 1rem;
-  background-color: #64b5f6;
-  color: #ffffff;
+  background: #007acc;
+  color: white;
   border: none;
-  border-radius: 6px;
+  border-radius: 8px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: background 0.3s ease;
 }
 
 button:hover {
-  background-color: #42a5f5;
+  background: #005fa3;
 }
