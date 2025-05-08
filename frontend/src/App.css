@@ -3,7 +3,7 @@ body, html {
   margin: 0;
   padding: 0;
   height: 100%;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Lora', serif;
 }
 
 /* Background container */
@@ -13,12 +13,12 @@ body, html {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(135deg, #eeceda, #d4e5f9); /* pastel gradient */
+  background: linear-gradient(135deg, #eeceda, #d4e5f9);
   position: relative;
   overflow: hidden;
 }
 
-/* Optional grid background dots */
+/* Optional grid dots */
 .container::before {
   content: "";
   position: absolute;
@@ -28,7 +28,7 @@ body, html {
   z-index: 0;
 }
 
-/* Quote card box */
+/* Quote box card */
 .quote-box {
   position: relative;
   z-index: 1;
@@ -44,7 +44,7 @@ body, html {
 
 /* Heading: Quote of the day */
 .quote-box h1 {
-  font-family: 'Georgia', serif;
+  font-family: 'Great Vibes', cursive;
   font-size: 3rem;
   color: #663399;
   margin-bottom: 1rem;
@@ -54,16 +54,18 @@ body, html {
 .quote {
   font-size: 1.5rem;
   font-style: italic;
+  font-family: 'Lora', serif;
   color: #5d3a78;
   margin-bottom: 1.5rem;
 }
 
-/* Author name */
+/* Author */
 .author {
   font-size: 1rem;
   font-weight: 500;
   color: #444;
   margin-bottom: 2rem;
+  font-family: 'Lora', serif;
 }
 
 /* New Quote Button */
@@ -71,6 +73,7 @@ button {
   padding: 0.7rem 2rem;
   font-size: 1rem;
   font-weight: 600;
+  font-family: 'Poppins', sans-serif;
   color: white;
   background: linear-gradient(135deg, #bc7fd4, #89d6e4);
   border: none;
