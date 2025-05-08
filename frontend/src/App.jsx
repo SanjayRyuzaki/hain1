@@ -16,14 +16,16 @@ function App() {
 
   return (
     <div className="container">
-      <div className="quote-box">
-        <p className="quote">"{quote.quote}"</p>
-        <p className="author">- {quote.author}</p>
-        <button onClick={fetchQuote}>New Quote</button>
+      <div className="quote-wrapper">
+        <h1 className="page-title">Quote of the Day</h1>
+        <div className="quote-box">
+          <p className="quote">"{quote.quote}"</p>
+          <p className="author">- {quote.author}</p>
+          <button onClick={fetchQuote}>New Quote</button>
+        </div>
       </div>
     </div>
   );
 }
 
 export default App;
-
