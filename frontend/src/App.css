@@ -1,29 +1,30 @@
+/* === Layout Reset === */
 *, *::before, *::after {
   box-sizing: border-box;
 }
 
-/* Global reset */
 body, html {
   margin: 0;
   padding: 0;
   height: 100%;
   font-family: 'Lora', serif;
+  overflow-x: hidden;
 }
 
-/* Background container */
+/* === Background Container === */
 .container {
   min-height: 100vh;
-  width: 100%;
+  width: 100vw;
   display: flex;
   justify-content: center;
   align-items: center;
   background: linear-gradient(135deg, #eeceda, #d4e5f9);
   position: relative;
-  overflow: hidden;
   padding: 2rem 1rem;
+  overflow: hidden;
 }
 
-/* Optional grid dots */
+/* Optional grid effect */
 .container::before {
   content: "";
   position: absolute;
@@ -40,18 +41,19 @@ body, html {
   display: flex;
   flex-direction: column;
   align-items: center;
+  max-width: 100%;
 }
 
-/* Page title styling */
+/* === Heading === */
 .page-title {
   font-family: 'Great Vibes', cursive;
-  font-size: 4rem;
+  font-size: clamp(2.5rem, 6vw, 4rem);
   color: #663399;
   margin-bottom: 2rem;
   text-align: center;
 }
 
-/* Quote box card */
+/* === Quote Box === */
 .quote-box {
   background: rgba(255, 255, 255, 0.85);
   border-radius: 16px;
@@ -63,7 +65,7 @@ body, html {
   backdrop-filter: blur(12px);
 }
 
-/* Quote text */
+/* === Quote Text === */
 .quote {
   font-size: 1.5rem;
   font-style: italic;
@@ -72,7 +74,7 @@ body, html {
   margin-bottom: 1.5rem;
 }
 
-/* Author */
+/* === Author === */
 .author {
   font-size: 1rem;
   font-weight: 500;
@@ -81,7 +83,7 @@ body, html {
   font-family: 'Lora', serif;
 }
 
-/* New Quote Button */
+/* === Button === */
 button {
   padding: 0.7rem 2rem;
   font-size: 1rem;
